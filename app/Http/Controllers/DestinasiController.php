@@ -15,12 +15,12 @@ class DestinasiController extends Controller
     public function pilih(Request $request)
     {
         $request->validate([
-            'destinasi' => 'required'
+            'destinasi' => 'required|exists:pake_wisata,id'
         ]);
 
         // Simpan ke session untuk sementara
         session(['destinasi' => $request->destinasi]);
 
-        return redirect()->route('pembayaran');
+        return redirect()->route('pembayaran', $request->destinasi);
     }
 }
