@@ -27,6 +27,7 @@
     </div>
 
     <!-- Detail Grid -->
+    
     <div class="grid grid-cols-2 gap-y-2 text-sm text-gray-800">
         <p class="font-medium">Nama </p>
         <p> : {{ $user->name }}</p>

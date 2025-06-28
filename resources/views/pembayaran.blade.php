@@ -10,28 +10,24 @@
         .font-pacifico {
             font-family: 'Pacifico', cursive;
         }
-        body {
-            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
-            min-height: 100vh;
-        }
+        
     </style>
 </head>
 <body class="font-sans">
-    <div class="min-h-screen flex items-center justify-center p-4">
-        <div class="max-w-sm w-full bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col">
             
             <!-- Header -->
-            <div class="p-6 text-center relative" style="background-image: url('/images/background-hutan.jpg'); background-size: cover; background-position: center;">
-                <div class="absolute inset-0 bg-gray-300 bg-opacity-60 backdrop-blur-sm rounded-t-3xl"></div>
+             <div class="p-12 text-center relative" style="background-image: url('/images/background-hutan.jpg'); background-size: cover; background-position: center;">
+                <div class="absolute inset-0 bg-gray-300 bg-opacity-60 backdrop-blur-sm"></div>
                 <div class="relative z-10 flex items-center justify-center gap-2 mb-2">
                     <h1 class="text-2xl font-pacifico text-black">Traveling.co</h1>
                     <img src="/images/pine-tree.png" alt="Logo" class="w-8 h-8">
                 </div>
-                <h2 class="relative z-10 text-xl font-bold text-black mt-2">Destinasi 🌴</h2>
             </div>
 
             <!-- Konten -->
-            <div class="p-6 flex-grow">
+            <div class="relative z-20 bg-white rounded-t-3xl -mt-8 p-6">
+            <h2 class="relative z-10 flex items-center justify-center text-xl font-bold text-black mt-2">Destinasi</h2>
+            <div class="p-6 flex-grow ">
                 <div class="text-center mb-6">
                     <img src="/images/{{ $gambar }}" alt="{{ $nama }}" class="rounded-2xl w-full h-40 object-cover mb-2">
                     <p class="text-base font-semibold text-gray-800">{{ $nama }}</p>
@@ -76,7 +72,7 @@
                 <div class="bg-gray-100 p-4 flex justify-between items-center rounded-b-3xl">
                     <p class="text-sm text-gray-800">Total <span class="font-semibold">Rp. {{ number_format($harga, 0, ',', '.') }}</span></p>
                     <button type="submit"
-                            class="bg-yellow-400 hover:bg-yellow-500 px-6 py-2 rounded-full text-black font-bold text-sm shadow-md transition">
+                            class="bg-yellow-400 hover:bg-yellow-200 px-6 py-2 rounded-full text-black font-bold text-sm shadow-md transition">
                         Bayar
                     </button>
                 </div>
